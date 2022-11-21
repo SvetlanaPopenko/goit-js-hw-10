@@ -7,7 +7,7 @@ function onSearch(evt) {
 }
 
 
-function fetchCountries(searchValue) {
+export function fetchCountries(searchValue) {
     return fetch(`${BASE_URL}${searchValue}?fields=name.official,capital,population,flags,languages`)
         .then(resp => {
             console.log(resp);
