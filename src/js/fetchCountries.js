@@ -12,15 +12,13 @@ function onSearch(evt) {
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';
 
-    const { } = evt.currentTarget
-
     if (!searchQuery) {
         return
     }
     fetchCountries(searchQuery)
         .then(country => {
             if (country.length > 10) {
-                return notifyInfo
+                return notifyInfo;
             }
             if (country.length > 1 && country.length < 10) {
                 refs.countryList.innerHTML = addCountryList(country);
@@ -58,4 +56,10 @@ function addCountryList(arr) {
         `<li class="country__item"><img class "country__img" src="${country.flag.svg}" alt="${country.name}" width = "100"/>
     <h2>${country.name.official}</h2> </li>`
     }).join('');
+}
+
+function addCountryInfo(arr) {
+    return arr.map(country => {
+        ``
+    })
 }
