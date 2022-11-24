@@ -1,16 +1,26 @@
 function addCountryList(arr) {
-    return arr.map(country => {
-        `<li class="country__item"><img class "country__img" src="${country.flag.svg}" alt="${country.name}" width = "100"/>
-    <h2>${country.name.official}</h2> </li>`
-    }).join('');
+  return arr
+    .map(country => {
+        return `<li class="country__item">
+      <img class "country__img" src="${country.flags.svg}" alt="${country.name}" width = "100">
+    <h2>${country.name.official}</h2> 
+    </li>`;
+    })
+    .join('');
 }
 
 function addCountryInfo(arr) {
-    return arr.map(country => {
-        `<div><img src="${country.flag.svg}" alt="${country.name}" width= "100"/><h2 class="country__title">${country.name.official}</h2>
-      <p class="country_desc">Capital:${country.capital}</p><p class="country__desc">Population:</p>${country.population}<p class="country__desc">Languages:${Object.values(country.languages)}</p>
+  return arr
+    .map(country => {
+        return `<div>
+      <img src="${country.flags.svg}" alt="${country.name}" width= "200">
+      <h2 class="country__title">${country.name.official}</h2>
+      <p class="country_desc">Capital:${country.capital}</p>
+      <p class="country__desc">Population:${country.population}</p>
+      <p class="country__desc">Languages:${Object.values(country.languages)}</p>
     </div>`;
-    }).join('');
+    })
+    .join('');
 }
 
 export { addCountryList, addCountryInfo };
