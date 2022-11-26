@@ -50,16 +50,17 @@ body {
 
 .country__title {
   color: darkslateblue;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 900;
 }
 
 .country__desc {
   color: blueviolet;
   font-size: 24px;
+  font-weight: 700;
 }
 
 .country__text {
   margin-left: 10px;
   font-size: 18px;
-  font-weight: 700;
-}
+ }
