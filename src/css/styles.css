@@ -26,14 +26,21 @@ body {
   display: inline-block;
   padding: 30px;
   background-color: #00deff;
-
+border: 1px solid #5d00ffe3;
 }
 
+.country__list{
+  display: flex;
+  gap: 20px;
+  
+}
 .country__item{
   list-style: none;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 gap: 20px;
+border: 2px solid slateblue;
 }
 
 .country__img{
@@ -48,9 +55,11 @@ gap: 20px;
 
 .country__desc{
   color: blueviolet;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .country__text{
   margin-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
